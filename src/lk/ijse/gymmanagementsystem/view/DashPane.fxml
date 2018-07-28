@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="dashPane" prefHeight="722.0" prefWidth="1077.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.DashPaneController">
+    <stylesheets>
+        <URL value="@/lk/ijse/gymmanagementsystem/css/dashpane.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="addMember" fitHeight="182.0" fitWidth="176.0" layoutX="54.0" layoutY="54.0" onMouseClicked="#addMemberOnMouseClicked" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assestes/add_user_male1600.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="57.0" layoutY="246.0" onMouseClicked="#addMemberOnMouseClicked" prefHeight="46.0" prefWidth="169.0" text="Add Member">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="addSchedule" fitHeight="189.0" fitWidth="207.0" layoutX="418.0" layoutY="41.0" onMouseClicked="#addScheduleOnMouseClicked" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assestes/scheduleDash.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="420.0" layoutY="246.0" onMouseClicked="#addScheduleOnMouseClicked" prefHeight="46.0" prefWidth="185.0" text="Add Schedule">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="attendance" fitHeight="224.0" fitWidth="189.0" layoutX="825.0" layoutY="41.0" onMouseClicked="#attendanceOnMouseClicked" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assestes/attencesheet.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="841.0" layoutY="246.0" onMouseClicked="#attendanceOnMouseClicked" prefHeight="46.0" prefWidth="157.0" text="Attendance">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="addPayment" fitHeight="182.0" fitWidth="176.0" layoutX="229.0" layoutY="351.0" onMouseClicked="#addPaymentOnMouseClicked" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assestes/money.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="225.0" layoutY="550.0" onMouseClicked="#addPaymentOnMouseClicked" prefHeight="46.0" prefWidth="185.0" text="Add Payment">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="addMeasurement" fitHeight="195.0" fitWidth="196.0" layoutX="632.0" layoutY="332.0" onMouseClicked="#addMeasurementOnMouseClicked" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assestes/bodytype.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="615.0" layoutY="550.0" onMouseClicked="#addMeasurementOnMouseClicked" prefHeight="46.0" prefWidth="255.0" text="Add Measurements">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="565.0" prefWidth="730.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.AddWorkoutController">
+    <stylesheets>
+        <URL value="@/lk/ijse/gymmanagementsystem/css/addworkout.css" />
+    </stylesheets>
+   <children>
+      <JFXTextField fx:id="txtWorkout" labelFloat="true" layoutX="99.0" layoutY="42.0" prefHeight="31.0" prefWidth="265.0" promptText="Workot ID">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtWorkoutName" labelFloat="true" layoutX="101.0" layoutY="101.0" prefHeight="31.0" prefWidth="265.0" promptText="Workot Name">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtWorkoutDescription" labelFloat="true" layoutX="98.0" layoutY="155.0" prefHeight="31.0" prefWidth="398.0" promptText="Workout Description">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="saveBtn" layoutX="264.0" layoutY="212.0" onAction="#saveBtnOnAction" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: blue;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clearBtn" layoutX="401.0" layoutY="210.0" onAction="#clearbtnOnAction" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: green;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <ScrollPane layoutX="33.0" layoutY="272.0" prefHeight="270.0" prefWidth="640.0">
+         <content>
+            <TableView fx:id="tbleWorkout" prefHeight="275.0" prefWidth="627.0">
+               <columns>
+                  <TableColumn prefWidth="109.0" text="Workout ID" />
+                  <TableColumn prefWidth="233.0" text="Workout Name" />
+                  <TableColumn prefWidth="281.0" text="Workout Description" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="cancelBtn" layoutX="536.0" layoutY="209.0" onAction="#cancelBtnOnAction" prefHeight="40.0" prefWidth="117.0" style="-fx-background-color: red;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

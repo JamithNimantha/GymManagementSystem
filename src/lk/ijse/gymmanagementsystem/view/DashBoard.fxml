@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.DashBoardController">
+    <stylesheets>
+        <URL value="@/lk/ijse/gymmanagementsystem/css/dashboard.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="slidePane" prefHeight="715.0" prefWidth="274.0" style="-fx-background-color: #5F6A6A;">
+         <children>
+            <JFXButton fx:id="memberbtn" layoutX="1.0" layoutY="164.0" onMouseClicked="#handleMemberOnClick" prefHeight="48.0" prefWidth="291.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Members" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="reportBtn" disable="true" layoutX="3.0" layoutY="536.0" onAction="#reportBtnOnAction" prefHeight="48.0" prefWidth="291.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="workoutBtn" layoutX="1.0" layoutY="212.0" onAction="#workoutBtnOnAction" prefHeight="48.0" prefWidth="291.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Schedule" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="measurementBtn" layoutX="1.0" layoutY="264.0" onMouseClicked="#measurementOnClicked" prefHeight="48.0" prefWidth="291.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Measurements" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="trainerBtn" layoutX="2.0" layoutY="312.0" onAction="#trainerBtnOnAction" prefHeight="48.0" prefWidth="291.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Trainer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Empty Tooltip" />
+               </tooltip>
+            </JFXButton>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="23.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8_Conference_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView disable="true" fitHeight="41.0" fitWidth="41.0" layoutX="34.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8-increase-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="27.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8-calendar-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="53.0" layoutX="27.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8_Triceps_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="48.0" layoutX="34.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8_School_Director_100px.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="settingBtn" layoutX="2.0" layoutY="592.0" onAction="#settingsBtnOnAction" prefHeight="48.0" prefWidth="291.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="34.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8_Services_100px.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnLogOut" layoutX="1.0" layoutY="644.0" onAction="#btnLogOutOnAction" prefHeight="48.0" prefWidth="292.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="34.0" layoutY="648.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8_Shutdown_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dashImage" fitHeight="115.0" fitWidth="291.0" layoutX="1.0" layoutY="1.0" onMouseEntered="#imageOnMouseEntered" onMouseExited="#imageOnMouseExited" pickOnBounds="true">
+               <image>
+                  <Image url="@../assestes/footer.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="dashbtn" layoutX="1.0" layoutY="116.0" onMouseClicked="#handleDashOnClick" prefHeight="48.0" prefWidth="291.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Dash" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="paymentBtn" layoutX="2.0" layoutY="368.0" onAction="#paymentBtnOnAction" prefHeight="48.0" prefWidth="292.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Payment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="membershipBtn" layoutX="1.0" layoutY="424.0" onAction="#membershipBtnOnAction" prefHeight="48.0" prefWidth="291.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Package" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="attendenceBtn" layoutX="3.0" layoutY="479.0" onAction="#attendenceBtnOnAction" prefHeight="48.0" prefWidth="291.0" styleClass="colorChange" stylesheets="@../css/dashboard.css" text="Attendence" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="34.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8-payment-history-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="34.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8-badge-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="34.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8-timesheet-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="23.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assestes/icons8-control-panel-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="dashPanel" layoutX="293.0" layoutY="-5.0" prefHeight="728.0" prefWidth="1072.0" />
+   </children>
+</AnchorPane>

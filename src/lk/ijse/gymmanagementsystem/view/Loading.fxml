@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="236.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.LoadingController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="143.0" layoutX="292.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assestes/Barbell.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="143.0" layoutX="194.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assestes/bench.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="143.0" layoutX="99.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assestes/lift.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="143.0" layoutX="9.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assestes/side.gif" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="loadingBar" layoutX="24.0" layoutY="170.0" prefHeight="20.0" prefWidth="404.0" progress="0.0" />
+      <Label fx:id="progress" layoutX="103.0" layoutY="197.0" prefHeight="27.0" prefWidth="232.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

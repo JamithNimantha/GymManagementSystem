@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="715.0" prefWidth="1077.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.TrainerController">
+    <stylesheets>
+        <URL value="@/lk/ijse/gymmanagementsystem/css/trainer.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane fx:id="tainerScrollPane" layoutX="40.0" layoutY="89.0" prefHeight="593.0" prefWidth="987.0">
+         <content>
+            <TableView fx:id="trainerTbl" prefHeight="630.0" prefWidth="1946.0">
+               <columns>
+                  <TableColumn prefWidth="107.0" text="Trainer ID" />
+                  <TableColumn prefWidth="264.0" text="Full Name" />
+                  <TableColumn prefWidth="116.0" text="Date of Birth" />
+                  <TableColumn prefWidth="114.0" text="Gender" />
+                  <TableColumn prefWidth="132.0" text="Mobile Number" />
+                  <TableColumn prefWidth="309.0" text="Address" />
+                  <TableColumn minWidth="0.0" prefWidth="254.0" text="E-Mail" />
+                  <TableColumn minWidth="0.0" prefWidth="152.0" text="Joining Date" />
+                  <TableColumn prefWidth="497.0" text="Description" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="addTrainerBtn" layoutX="492.0" layoutY="25.0" onMouseClicked="#addMemberOnClicked" prefHeight="45.0" prefWidth="227.0" style="-fx-background-color: green;" text="Add Trainer" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="updateTrainerBtn" layoutX="765.0" layoutY="22.0" onMouseClicked="#updateMemberOnClicked" prefHeight="45.0" prefWidth="260.0" style="-fx-background-color: red;" text="Update Trainer" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnReload" layoutX="230.0" layoutY="24.0" onAction="#btnReloadOnAction" onMouseClicked="#trainerOnClicked" prefHeight="26.0" prefWidth="215.0" style="-fx-background-color: blue;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

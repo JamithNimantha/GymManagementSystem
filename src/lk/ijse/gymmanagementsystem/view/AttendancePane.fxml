@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="715.0" prefWidth="1028.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.AttendancePaneController">
+    <stylesheets>
+        <URL value="@/lk/ijse/gymmanagementsystem/css/attendancepane.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane layoutX="13.0" layoutY="64.0" prefHeight="624.0" prefWidth="996.0">
+         <content>
+            <TableView fx:id="tblAttendance" prefHeight="625.0" prefWidth="989.0">
+              <columns>
+                <TableColumn prefWidth="206.0" text="Member Name" />
+                <TableColumn prefWidth="185.0" text="Member ID" />
+                  <TableColumn prefWidth="221.0" text="Attendace ID" />
+                  <TableColumn prefWidth="203.0" text="Date" />
+                  <TableColumn minWidth="0.0" prefWidth="173.0" text="In Time" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="markAttendanceBtn" layoutX="737.0" layoutY="11.0" onAction="#markAttenceBtnOnAction" prefHeight="45.0" prefWidth="260.0" style="-fx-background-color: green;" text="Mark Attendance" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnReload" layoutX="495.0" layoutY="12.0" onAction="#btnReladOnAction" prefHeight="45.0" prefWidth="206.0" style="-fx-background-color: blue;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,7 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.colorChange:hover{
+	-fx-background-color: #a1a5ad;
+}
