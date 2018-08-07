@@ -9,14 +9,6 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
-import java.io.IOException;
-import java.net.URL;
-import java.sql.SQLException;
-import java.time.LocalDate;
-import java.util.Optional;
-import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,8 +21,16 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import lk.ijse.gymmanagementsystem.business.custom.TrainerBO;
 import lk.ijse.gymmanagementsystem.business.custom.impl.TrainerBOImpl;
+import lk.ijse.gymmanagementsystem.common.Alerts;
 import lk.ijse.gymmanagementsystem.common.IDGenarator;
-    import lk.ijse.gymmanagementsystem.model.TrainerDTO;
+import lk.ijse.gymmanagementsystem.model.TrainerDTO;
+import java.io.IOException;
+import java.net.URL;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * FXML Controller class
@@ -68,13 +68,15 @@ public class AddTrainerController implements Initializable {
     private JFXTextField descriptionTxt;
     @FXML
     private JFXTextField joiningDateTxt;
+
     @FXML
     private JFXTextField txtFullName;
-    
     
 
     @FXML
     void cancelBtnOnAction(ActionEvent event){
+       // Alerts.confirmClose(cancelBtn);
+        /*
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setHeaderText(null);
         //alert.setGraphic(new ImageView(this.getClass().getResource("/lk/ijse/gymmanagementsystem/assestes/imogi_sad.gif").toString()));
@@ -85,6 +87,9 @@ public class AddTrainerController implements Initializable {
             Stage stage  = (Stage) cancelBtn.getScene().getWindow();
             stage.close();
         }else{}
+        */
+        Stage stage  = (Stage) cancelBtn.getScene().getWindow();
+        stage.close();
     
     }
 
@@ -125,12 +130,11 @@ public class AddTrainerController implements Initializable {
             if(addTrainer){
                 Alert a=new Alert(Alert.AlertType.INFORMATION,"Added",ButtonType.OK);
                 a.setHeaderText(null);
-                a.setGraphic(new ImageView(this.getClass().getResource("/lk/ijse/gymmanagementsystem/assestes/emogi_clap.gif").toString()));
+               // a.setGraphic(new ImageView(this.getClass().getResource("/lk/ijse/gymmanagementsystem/assestes/emogi_clap.gif").toString()));
                 a.setContentText("Congrats! New Trainer Added Successfully...");
                 a.show();
                 clear();
-                
-                
+
             }
         } catch (Exception ex) {
             Logger.getLogger(AddTrainerController.class.getName()).log(Level.SEVERE, null, ex);

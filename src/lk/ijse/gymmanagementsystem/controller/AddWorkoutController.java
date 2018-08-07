@@ -72,10 +72,10 @@ public class AddWorkoutController implements Initializable {
 
     }
     void clear(){
-    setWorkoutID();
-    txtWorkoutName.clear();
-    txtWorkoutDescription.clear();
-    txtWorkoutName.requestFocus();
+        setWorkoutID();
+        txtWorkoutName.clear();
+        txtWorkoutDescription.clear();
+        txtWorkoutName.requestFocus();
     }
 
     @FXML

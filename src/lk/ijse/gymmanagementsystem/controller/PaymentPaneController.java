@@ -27,6 +27,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lk.ijse.gymmanagementsystem.business.BOFactory;
 import lk.ijse.gymmanagementsystem.business.custom.PaymentBO;
+import lk.ijse.gymmanagementsystem.common.FxmlLoader;
 import lk.ijse.gymmanagementsystem.db.DBConnection;
 import lk.ijse.gymmanagementsystem.model.CustomDTO;
 import net.sf.jasperreports.engine.JRException;
@@ -75,11 +76,7 @@ public class PaymentPaneController implements Initializable {
 
     @FXML
     private void addPaymentBtnOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/Payment.fxml"));
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(new Scene(root));
-        stage.show();
+        FxmlLoader.classLoader("/lk/ijse/gymmanagementsystem/view/Payment.fxml");
     }
 
     @FXML
@@ -100,8 +97,6 @@ public class PaymentPaneController implements Initializable {
         try {
             InputStream resourceAsStream = getClass().getResourceAsStream("/lk/ijse/gymmanagementsystem/reports/payment.jasper");
             HashMap map = new HashMap();
-            
-            
             JasperPrint Jasperprint = JasperFillManager.fillReport(resourceAsStream, map,DBConnection.getInstance().getConnection());
             JasperViewer.viewReport(Jasperprint,false);
         } catch (IOException | JRException ex) {

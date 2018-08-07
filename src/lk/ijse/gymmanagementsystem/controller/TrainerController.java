@@ -26,6 +26,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lk.ijse.gymmanagementsystem.business.BOFactory;
 import lk.ijse.gymmanagementsystem.business.custom.TrainerBO;
+import lk.ijse.gymmanagementsystem.common.FxmlLoader;
 import lk.ijse.gymmanagementsystem.model.TrainerDTO;
 
 /**
@@ -55,18 +56,14 @@ public class TrainerController implements Initializable {
     
    
    
-    void loadAllTrainers() throws Exception{
+    private void loadAllTrainers() throws Exception{
         trainerTbl.setItems(FXCollections.observableArrayList(trainerBO.getAllTrainers()));
     }
     
 
     @FXML
-    void addMemberOnClicked(MouseEvent event) throws IOException {   
-        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/AddTrainer.fxml"));
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(new Scene(root));
-        stage.show();
+    void addMemberOnClicked(MouseEvent event) throws IOException {
+        FxmlLoader.classLoader("/lk/ijse/gymmanagementsystem/view/AddTrainer.fxml");
             
     }
 
@@ -77,11 +74,7 @@ public class TrainerController implements Initializable {
 
     @FXML
     void updateMemberOnClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/UpdateTrainer.fxml"));
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(new Scene(root));
-        stage.show();
+       FxmlLoader.classLoader("/lk/ijse/gymmanagementsystem/view/UpdateTrainer.fxml");
         
     }
     

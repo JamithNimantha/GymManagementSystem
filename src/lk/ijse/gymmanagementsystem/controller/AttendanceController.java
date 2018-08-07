@@ -66,6 +66,7 @@ public class AttendanceController implements Initializable {
 
     @FXML
     void cancelOnAction(ActionEvent event) {
+        /*
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setHeaderText(null);
         alert.setGraphic(new ImageView(this.getClass().getResource("/lk/ijse/gymmanagementsystem/assestes/imogi_sad.gif").toString()));
@@ -73,9 +74,12 @@ public class AttendanceController implements Initializable {
         alert.setContentText("Are you want to Close?");
         Optional<ButtonType> showAndWait = alert.showAndWait();
         if(showAndWait.get()==ButtonType.OK){
-            Stage stage  = (Stage) cancelBtn.getScene().getWindow();
-            stage.close();
+        Stage stage  = (Stage) cancelBtn.getScene().getWindow();
+        stage.close();
         }else{}
+        */
+        Stage stage  = (Stage) cancelBtn.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

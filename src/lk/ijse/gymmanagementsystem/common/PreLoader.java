@@ -22,7 +22,7 @@ public class PreLoader extends Preloader{
         scene=new Scene(root);
     }
     @Override
-    public void start(Stage primaryStage) throws  Exception{
+    public void start(Stage primaryStage) {
         this.preLoaderStage=primaryStage;
 
         preLoaderStage.initStyle(StageStyle.UNDECORATED);

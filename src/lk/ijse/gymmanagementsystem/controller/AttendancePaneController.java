@@ -24,6 +24,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lk.ijse.gymmanagementsystem.business.BOFactory;
 import lk.ijse.gymmanagementsystem.business.custom.AttendanceBO;
+import lk.ijse.gymmanagementsystem.common.FxmlLoader;
 import lk.ijse.gymmanagementsystem.model.CustomDTO;
 
 /**
@@ -71,11 +72,7 @@ public class AttendancePaneController implements Initializable {
 
     @FXML
     private void markAttenceBtnOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/Attendance.fxml"));
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(new Scene(root));
-        stage.show();
+        FxmlLoader.classLoader("/lk/ijse/gymmanagementsystem/view/Attendance.fxml");
 
     }
 

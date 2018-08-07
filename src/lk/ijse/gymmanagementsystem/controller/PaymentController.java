@@ -38,10 +38,6 @@ import org.controlsfx.control.textfield.TextFields;
  */
 public class PaymentController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
-    
     private MemberBO memberBO = BOFactory.getInstance().getBO(BOFactory.BOTypes.MEMBER);
     
     private PaymentBO paymentBO= BOFactory.getInstance().getBO(BOFactory.BOTypes.PAYMENT);

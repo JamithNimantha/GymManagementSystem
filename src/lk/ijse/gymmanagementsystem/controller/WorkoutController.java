@@ -6,9 +6,6 @@
 package lk.ijse.gymmanagementsystem.controller;
 
 import com.jfoenix.controls.JFXButton;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,9 +13,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import lk.ijse.gymmanagementsystem.common.FxmlLoader;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * FXML Controller class
@@ -45,50 +46,38 @@ public class WorkoutController implements Initializable {
 
     @FXML
     private JFXButton addWorkoutScheduleBtn;
-    
-   
-
 
     @FXML
     void addWorkoutBtnOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/AddWorkout.fxml"));
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(new Scene(root));
-        stage.show();
+        FxmlLoader.classLoader("/lk/ijse/gymmanagementsystem/view/AddWorkout.fxml");
     }
 
     @FXML
     void addWorkoutScheduleBtnOnAction(ActionEvent event) throws IOException {
-       Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/AddWorkoukSchedule.fxml"));
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(new Scene(root));
-        stage.show();
+       FxmlLoader.classLoader("/lk/ijse/gymmanagementsystem/view/AddWorkoukSchedule.fxml");
     }
 
     @FXML
     void updateWorkoutBtnOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/UpdateWorkout.fxml"));
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(new Scene(root));
-        stage.show();
+        FxmlLoader.classLoader("/lk/ijse/gymmanagementsystem/view/UpdateWorkout.fxml");
     }
 
     @FXML
     void updateWorkoutScheduleBtnOnAction(ActionEvent event) throws IOException {
+        FxmlLoader.classLoader("/lk/ijse/gymmanagementsystem/view/UpdateWorkoutSchedule.fxml");
+
+       /*
         Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/UpdateWorkoutSchedule.fxml"));
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(new Scene(root));
         stage.show();
-
+        */
 
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
     }    
     
 }

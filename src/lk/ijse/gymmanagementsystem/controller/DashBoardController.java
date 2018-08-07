@@ -18,6 +18,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import lk.ijse.gymmanagementsystem.common.Transition;
 
 public class DashBoardController implements Initializable{
 
@@ -132,7 +133,7 @@ public class DashBoardController implements Initializable{
     }
     
     
-    void loadDashPane(){
+    private void loadDashPane(){
         try {
             AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/DashPane.fxml"));
             dashPanel.getChildren().setAll(pane);
@@ -144,27 +145,18 @@ public class DashBoardController implements Initializable{
     
     @FXML
     void imageOnMouseEntered(MouseEvent event) {
-        ImageView image = (ImageView) event.getSource();
-        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(200), image);
-        scaleTransition.setToX(0.8);
-        scaleTransition.setToY(0.8);
-        scaleTransition.play();
-        
+        Transition.imageOnMouseEntered(event);
     }
 
     @FXML
     void imageOnMouseExited(MouseEvent event) {
-        ImageView image = (ImageView) event.getSource();
-        ScaleTransition tran = new ScaleTransition(Duration.millis(300), image);
-        tran.setToX(1.0);
-        tran.setToY(1.0);
-        tran.play();
+        Transition.OnMOuseExited(event);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         loadDashPane();
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
     @FXML
@@ -173,7 +165,6 @@ public class DashBoardController implements Initializable{
         Parent parent = FXMLLoader.load(this.getClass().getResource("/lk/ijse/gymmanagementsystem/view/LogIn.fxml"));
         Scene scene =  new Scene(parent);
         stage.resizableProperty().setValue(Boolean.FALSE);
-
         stage.setScene(scene);
         stage.show();
     }
