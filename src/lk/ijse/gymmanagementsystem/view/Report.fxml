@@ -4,7 +4,5 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="728.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lk.ijse.gymmanagementsystem.controller.ReportController">
-    <stylesheets>
-        <URL value="@/lk/ijse/gymmanagementsystem/css/report.css" />
-    </stylesheets>
+
 </AnchorPane>

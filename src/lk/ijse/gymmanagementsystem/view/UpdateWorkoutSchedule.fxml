@@ -11,9 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.UpdateWorkoutScheduleController">
-    <stylesheets>
-        <URL value="@/lk/ijse/gymmanagementsystem/css/updateworkoutschedule.css" />
-    </stylesheets>
+
    <children>
       <JFXComboBox editable="true" labelFloat="true" layoutX="64.0" layoutY="30.0" prefHeight="26.0" prefWidth="242.0" promptText="Search Member" />
       <JFXTextField labelFloat="true" layoutX="64.0" layoutY="72.0" prefHeight="26.0" prefWidth="199.0" promptText="Workout ID" />

@@ -9,9 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="724.0" prefWidth="1022.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.MeasurementController">
-    <stylesheets>
-        <URL value="@/lk/ijse/gymmanagementsystem/css/measurement.css" />
-    </stylesheets>
+
    <children>
       <ScrollPane fx:id="measurementScrollPane" layoutX="40.0" layoutY="89.0" prefHeight="607.0" prefWidth="935.0">
          <content>

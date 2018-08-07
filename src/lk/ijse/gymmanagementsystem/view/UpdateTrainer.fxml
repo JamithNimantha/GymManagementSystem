@@ -10,9 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="736.0" prefWidth="655.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.UpdateTrainerController">
-    <stylesheets>
-        <URL value="@/lk/ijse/gymmanagementsystem/css/updatetrainer.css" />
-    </stylesheets>
+
    <children>
       <JFXTextField labelFloat="true" layoutX="94.0" layoutY="34.0" prefHeight="16.0" prefWidth="227.0" promptText="Search Member" />
       <JFXTextField labelFloat="true" layoutX="101.0" layoutY="111.0" prefHeight="26.0" prefWidth="248.0" promptText="Trainer ID" />

@@ -8,9 +8,6 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="345.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmanagementsystem.controller.AddMeasurementController">
-    <stylesheets>
-        <URL value="@/lk/ijse/gymmanagementsystem/css/addmeasurement.css" />
-    </stylesheets>
    <children>
       <JFXTextField fx:id="measurementIDTxt" editable="false" labelFloat="true" layoutX="38.0" layoutY="74.0" prefHeight="26.0" prefWidth="228.0" promptText="Measurement ID" />
       <JFXTextField fx:id="heightTxt" labelFloat="true" layoutX="41.0" layoutY="162.0" onAction="#heightTxtOnAction" onKeyReleased="#heightTxtOnKeyReleased" prefHeight="26.0" prefWidth="113.0" promptText="Height(cm)" />
