@@ -38,7 +38,7 @@ public class PreLoader extends Preloader{
 
     }
 
-    @Override
+   // @Override
     public void handleStateChangeNotification(Preloader.StateChangeNotification info) {
         StateChangeNotification.Type type=info.getType();
         switch (type){

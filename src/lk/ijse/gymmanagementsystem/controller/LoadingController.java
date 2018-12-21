@@ -16,7 +16,7 @@ public class LoadingController implements Initializable {
     private Label progress;
     public static Label label;
 
-    public static double value;
+    //public static double value;
     @FXML
     private ProgressBar loadingBar;
 
